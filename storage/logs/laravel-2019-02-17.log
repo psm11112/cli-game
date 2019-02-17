@@ -1,0 +1,170 @@
+[2019-02-17 06:14:37] local.ERROR: Command "make" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /opt/game-cli/vendor/symfony/console/Application.php:632)
+[stacktrace]
+#0 /opt/game-cli/vendor/symfony/console/Application.php(226): Symfony\\Component\\Console\\Application->find('make')
+#1 /opt/game-cli/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /opt/game-cli/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-02-17 06:15:17] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = task and table_name = users) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = task and table_name = users) at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 2002): SQLSTATE[HY000] [2002] Connection refused at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('users')
+#4 /opt/game-cli/app/Console/Commands/StartGame.php(49): Illuminate\\Support\\Facades\\Facade::__callStatic('hasTable', Array)
+#5 [internal function]: App\\Console\\Commands\\StartGame->handle()
+#6 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#11 /opt/game-cli/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#13 /opt/game-cli/vendor/symfony/console/Application.php(901): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /opt/game-cli/vendor/symfony/console/Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\StartGame), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /opt/game-cli/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /opt/game-cli/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 {main}
+"} 
+[2019-02-17 06:15:30] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = task and table_name = users) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = task and table_name = users) at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 2002): SQLSTATE[HY000] [2002] Connection refused at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('users')
+#4 /opt/game-cli/app/Console/Commands/StartGame.php(49): Illuminate\\Support\\Facades\\Facade::__callStatic('hasTable', Array)
+#5 [internal function]: App\\Console\\Commands\\StartGame->handle()
+#6 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#11 /opt/game-cli/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#13 /opt/game-cli/vendor/symfony/console/Application.php(901): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /opt/game-cli/vendor/symfony/console/Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\StartGame), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /opt/game-cli/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /opt/game-cli/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 {main}
+"} 
+[2019-02-17 06:15:51] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = task and table_name = users) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = task and table_name = users) at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 2002): SQLSTATE[HY000] [2002] Connection refused at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('users')
+#4 /opt/game-cli/app/Console/Commands/StartGame.php(49): Illuminate\\Support\\Facades\\Facade::__callStatic('hasTable', Array)
+#5 [internal function]: App\\Console\\Commands\\StartGame->handle()
+#6 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#11 /opt/game-cli/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#13 /opt/game-cli/vendor/symfony/console/Application.php(901): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /opt/game-cli/vendor/symfony/console/Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\StartGame), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /opt/game-cli/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /opt/game-cli/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 {main}
+"} 
+[2019-02-17 06:15:59] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = task and table_name = users) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (SQL: select * from information_schema.tables where table_schema = task and table_name = users) at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 2002): SQLSTATE[HY000] [2002] Connection refused at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('users')
+#4 /opt/game-cli/app/Console/Commands/StartGame.php(49): Illuminate\\Support\\Facades\\Facade::__callStatic('hasTable', Array)
+#5 [internal function]: App\\Console\\Commands\\StartGame->handle()
+#6 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#11 /opt/game-cli/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#13 /opt/game-cli/vendor/symfony/console/Application.php(901): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /opt/game-cli/vendor/symfony/console/Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\StartGame), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /opt/game-cli/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /opt/game-cli/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 {main}
+"} 
+[2019-02-17 06:16:55] local.ERROR: Call to undefined method App\User::getUserByEmail() {"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method App\\User::getUserByEmail() at /opt/game-cli/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:50)
+[stacktrace]
+#0 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Model::throwBadMethodCallException('getUserByEmail')
+#1 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1610): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'getUserByEmail', Array)
+#2 /opt/game-cli/app/Console/Commands/StartGame.php(92): Illuminate\\Database\\Eloquent\\Model->__call('getUserByEmail', Array)
+#3 [internal function]: App\\Console\\Commands\\StartGame->handle()
+#4 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#7 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Container/Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#8 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#9 /opt/game-cli/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 /opt/game-cli/vendor/symfony/console/Application.php(901): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 /opt/game-cli/vendor/symfony/console/Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Console\\Commands\\StartGame), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /opt/game-cli/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /opt/game-cli/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /opt/game-cli/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
