@@ -129,27 +129,22 @@ class StartGame extends Command
 
                     if($this->confirm("You Want to Bet")){
                         $randomArray=[1,0,2,0,3,0,4,0,5,0];
-                        start:
 
-
-                        if($user->bet_count<1000){
-
-                            $wallet=($user->points+array_rand($randomArray)*10);
-                            $user=$userModel->getUser($user->id);
-                            $user->points=$wallet;
-                            $user->bet_count=$user->bet_count+1;
-                            $user->save();
-                            $this->info("User Point:--".$wallet);
-
-
-                            if($this->confirm("You Want to Continues ")){
-                                goto start;
-                            }
-
-                        }else{
-
-                            $this->error('Bets not more than 1000');
+                        $number = range(1,1000);
+                        $wallet=0;
+                        foreach ($number as $key=>$value){
+                            $wallet+=($user->points+array_rand($randomArray)*10);
+                            $this->info($value."-".$wallet );
                         }
+
+
+                        $user->points=$wallet;
+                        $user->save();
+                        $this->info("User Point:--".$wallet);
+
+
+
+
                     }
 
                 }else{
